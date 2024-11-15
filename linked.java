@@ -39,8 +39,18 @@ class Main {
             System.out.print(list.data+"->");
             list=list.next;
         }
-        System.out.print("null");
+        System.out.print("null\n");
         list = head;
-        while(list.next)
+        while(list.next.data != 3){
+            list = list.next;
+        }
+        list.next = list.next.next;
+        list = head;
+        while(list.next != null){
+            System.out.print(list.data+"->");
+            list=list.next;
+        }
+        System.out.print("null");
+  
     }
 }
